@@ -15,6 +15,13 @@ function changeMenu(){
   setlinksshowing(!linksshowing);
 }
 
+// Function to handle click on navigation link
+function handleNavLinkClick() {
+  // Close the menu
+  setclicked(false);
+  setlinksshowing(false);
+}
+
   return (
     <nav className='nav_container'>
     {/* nav logo */}
@@ -22,11 +29,11 @@ function changeMenu(){
         <img src={destinylogo} alt='Destiny_logo' className='destiny_logo'/>
     </Link>
         <ul className={clicked ? 'active' : ''} id={linksshowing ? '' :'navshowing'}>
-            <li><Link to="/">HOME</Link></li>
-            <li><Link to='/about-us'>ABOUT US</Link></li>
-            <li><Link to="/kids">OUR KIDS</Link></li>
-            <li><Link to="/gallery">GALLERY</Link></li>
-            <li><Link to="/contact-us">CONTACT US</Link></li>
+            <li><Link   onClick={handleNavLinkClick} to="/">HOME</Link></li>
+            <li><Link   onClick={handleNavLinkClick} to='/about-us'>ABOUT US</Link></li>
+            <li><Link   onClick={handleNavLinkClick} to="/kids">OUR KIDS</Link></li>
+            <li><Link   onClick={handleNavLinkClick} to="/gallery">GALLERY</Link></li>
+            <li><Link   onClick={handleNavLinkClick} to="/contact-us">CONTACT US</Link></li>
             
         </ul>
       
