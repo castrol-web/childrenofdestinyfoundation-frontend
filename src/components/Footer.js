@@ -9,7 +9,7 @@ const date = new Date();
 
 function Footer() {
     return (
-        <footer className="bg-gray-800 py-3 text-white text-center w-full mt-10">
+        <footer className="bg-gray-800 text-white text-center w-full mt-10">
             <div className='flex gap-7 items-center justify-center'>
                 <p className='castrol_span'>Made with <i>❤️</i> by Castrol Banda</p>
                 <p>copyright © {date.getFullYear()} Children of Destiny App. All rights reserved.</p>
