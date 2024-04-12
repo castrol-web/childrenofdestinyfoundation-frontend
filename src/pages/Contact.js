@@ -26,12 +26,7 @@ function Contact() {
         try {
             setLoading(true);
             axios.defaults.withCredentials = true;
-            const response = await axios.post(`${URL}/api/users/contact-us`, formData, {
-                method: "POST",
-                headers: {
-                    'Content-Type': 'application/json',
-                }
-            });
+            const response = await axios.post(`${URL}/api/users/contact-us`, formData);
             if (response.status === 201) {
                 toast.success("feedback received successfully");
                 // Clear form fields after submission
