@@ -38,7 +38,6 @@ function App() {
         <Route path="/kid-details/:id" element={<KidDetailsPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <Footer />
     </Router>
   );
 }
