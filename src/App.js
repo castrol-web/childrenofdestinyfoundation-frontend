@@ -7,7 +7,6 @@ import Projects from "./pages/Projects";
 import Kids from "./pages/Kids";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
-import Footer from "./components/Footer";
 import UploadKids from "./components/UploadKids";
 import KidDetailsPage from "./components/KidDetailsPage";
 import PostPictures from "./components/PostPictures";
