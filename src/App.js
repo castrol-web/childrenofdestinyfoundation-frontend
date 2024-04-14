@@ -14,6 +14,7 @@ import LayersProject from "./components/LayersProject";
 import ProjectBroilers from "./components/ProjectBroilers";
 import PigsProject from "./components/PigsProject";
 import NotFound from "./components/NotFound";
+import Footer from './components/Footer';
 
 // Backend URL
 export const URL = process.env.REACT_APP_SERVER_URL;
@@ -37,6 +38,7 @@ function App() {
         <Route path="/kid-details/:id" element={<KidDetailsPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

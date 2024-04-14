@@ -40,21 +40,6 @@ body {
     letter-spacing: 5px;
 }
 
-.main_footer{
-    position: fixed;
-    bottom: 0;
-    justify-content: center;
-    align-items: center;
-}
-
-.copyright_details{
-    align-items: center;
-    justify-items: space-between;
-    display: flex;
-    gap: 20px;
-    color: #d4cb74;
-}
-
 .social_icons{
     align-items: center;
     justify-content: center;
