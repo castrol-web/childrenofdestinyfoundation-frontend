@@ -68,16 +68,17 @@ function Gallery() {
           </div>
           <img src={data.img} alt='popup thumbnail' className='pop_img'></img>
           <div className='navigations'>
-            <div className='next_tn ml-2'>
-              <button onClick={function () { imgAction('next-img') }} className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                Next
-              </button>
-            </div>
             <div className='second'>
               <button onClick={function () { imgAction('previous-img') }} className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                 prev
               </button>
             </div>
+            <div className='next_tn ml-2'>
+              <button onClick={function () { imgAction('next-img') }} className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                Next
+              </button>
+            </div>
+
           </div>
         </div>
       }
