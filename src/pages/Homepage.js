@@ -22,13 +22,20 @@ import axios from 'axios';
 import { URL } from '../App';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 
 function Homepage() {
   const [loading, setIsloading] = useState(false);
   const [kid, setKid] = useState([]);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
+  //aos animation
+  useEffect(()=>{
+    AOS.init()
+  },[])
 
   function viewKids() {
     navigate("/kids")
@@ -140,24 +147,24 @@ function Homepage() {
           <h2 className="text-red-400 text-3xl font-semibold text-center mb-8">Children Of Destiny Cultures</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* culture 1 */}
-            <div className="p-6 rounded-lg shadow-md mx-3 cultures">
+            <div className="p-6 rounded-lg shadow-md mx-3 cultures" data-aos="fade-up">
               <h3 className="text-stone-50 flex gap-4 text-xl font-semibold mb-4">Praying <FaPersonPraying className='animate-pulse' /></h3>
               <p className='text-slate-600'>God has been our pillar through all hardships that we have been through,We therefore take time during the morning hours to pray and in the evening meditations of the scriptures</p>
             </div>
             {/* culture 2 */}
-            <div className="p-6 border-slate-800 rounded-lg shadow-md mx-3 cultures">
+            <div className="p-6 border-slate-800 rounded-lg shadow-md mx-3 cultures" data-aos='fade-right'>
               <h3 className="text-stone-50 flex gap-4 text-xl font-semibold mb-4">Working/Chores <FaPersonDigging className='animate-pulse' /></h3>
               <p className='text-slate-600'>We believe in the saying "If you don't work, then don't eat".Each one of us takes part in maintaining the compound cleaness,feeding of the animals and watering the plants that can either be done during the morning hours or evening sometimes both depending on the weather</p>
             </div>
             {/* culture 3 */}
-            <div className="p-6 border-slate-800 rounded-lg shadow-md mx-3 cultures">
+            <div className="p-6 border-slate-800 rounded-lg shadow-md mx-3 cultures" data-aos='zoom-in'>
               <h3 className="text-stone-50 flex gap-4 text-xl font-semibold mb-4">Love <GiLoveMystery className='animate-pulse' /></h3>
               <p className='text-slate-600'>Love has been another pillar in this home especially during holidays we take some sitting and sharing School progress and achievements one has had during the period.Those that are down are encouraged and couched while those shining are praized for good work they are putting.</p>
             </div>
           </div>
 
           {/* our children section */}
-          <div className='container mt-10 pb-10'>
+          <div className='container mt-10 pb-10' data-aos="zoom-out">
             <h2 className="text-red-400 text-3xl font-semibold text-center mb-8">Our Kids</h2>
             <div className=" mx-auto rounded-lg shadow-lg items-center justify-center p-5 md:w-3/4">
               {
@@ -187,7 +194,7 @@ function Homepage() {
 
         {/* projects showcasing section */}
         <div className='container items-center justify-center mx-auto mt-20'>
-          <div className='text-center lg:w-2/4 items-center mx-auto px-5'>
+          <div className='text-center lg:w-2/4 items-center mx-auto px-5' data-aos="fade-in">
             <h1 className="text-red-400 text-3xl font-semibold text-center mb-8">Our Projects</h1>
             <small className='decoration-double text-orange-200'>we invite you to join us in making a difference. While some of our projects are still
               in their infancy and others may not yet meet our desired scale, every small step forward is a
@@ -197,7 +204,7 @@ function Homepage() {
               be instrumental in nurturing growth and progress within our orphanage community.</small>
           </div>
           <div className='grid-cols-1 sm:grid md:grid-cols-3 mb-10  gap-10'>
-            <div className="mt-6 flex flex-col rounded-lg  text-surface shadow-secondary-1 sm:shrink-0 sm:grow sm:basis-0">
+            <div className="mt-6 flex flex-col rounded-lg  text-surface shadow-secondary-1 sm:shrink-0 sm:grow sm:basis-0" data-aos="fade-down-right">
               <img className="rounded-t-lg"
                 src={layers}
                 alt="layers" />
@@ -222,7 +229,7 @@ function Homepage() {
               </div>
             </div>
             {/* broilers project */}
-            <div className="mt-6 flex flex-col rounded-lg  text-surface shadow-secondary-1 sm:shrink-0 sm:grow sm:basis-0">
+            <div className="mt-6 flex flex-col rounded-lg  text-surface shadow-secondary-1 sm:shrink-0 sm:grow sm:basis-0" data-aos="fade-in">
               <img className="rounded-t-lg"
                 src={broilers}
                 alt="layers" />
@@ -246,7 +253,7 @@ function Homepage() {
               </div>
             </div>
             {/* pigs project  */}
-            <div className="mt-6 flex flex-col rounded-lg  text-surface shadow-secondary-1 sm:shrink-0 sm:grow sm:basis-0">
+            <div className="mt-6 flex flex-col rounded-lg  text-surface shadow-secondary-1 sm:shrink-0 sm:grow sm:basis-0" data-aos="zoom-in">
               <img className="rounded-t-lg"
                 src={pigs}
                 alt="layers" />
@@ -272,7 +279,7 @@ function Homepage() {
             </div>
 
             {/* farming project */}
-            <div className="mt-6 flex flex-col rounded-lg  text-surface shadow-secondary-1 sm:shrink-0 sm:grow sm:basis-0">
+            <div className="mt-6 flex flex-col rounded-lg  text-surface shadow-secondary-1 sm:shrink-0 sm:grow sm:basis-0" data-aos="flip-up">
               <img className="rounded-t-lg"
                 src={farming}
                 alt="layers" />
@@ -298,7 +305,7 @@ function Homepage() {
             </div>
 
             {/* rabbits project */}
-            <div className="mt-6 flex flex-col rounded-lg  text-surface shadow-secondary-1 sm:shrink-0 sm:grow sm:basis-0">
+            <div className="mt-6 flex flex-col rounded-lg  text-surface shadow-secondary-1 sm:shrink-0 sm:grow sm:basis-0" data-aos="zoom-in">
               <img className="rounded-t-lg"
                 src={rabbits}
                 alt="layers" />
